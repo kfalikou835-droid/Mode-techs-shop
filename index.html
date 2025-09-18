@@ -4,25 +4,149 @@
   <meta charset="UTF-8">
   <title>MODE&TECHS - Boutique Hybride</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 0; }
-    header { background: #111; padding: 20px 0; text-align: center; }
-    header img { max-width: 320px; height: 80px; }
-    h1 { color: #222; }
-    .intro { text-align: center; padding: 20px; }
-    .categories { display: flex; justify-content: center; gap: 2rem; margin-top: 40px; }
-    .cat { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 16px #0002; min-width: 200px; }
-    .cat h2 { color: #0066cc; }
-    footer { text-align: center; color: #888; padding: 20px 0; }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(135deg, #e1e8ed 0%, #f5fafd 100%);
+      margin: 0;
+      color: #232b2b;
+    }
+    header {
+      background: #232b2b;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header img {
+      max-width: 320px;
+      height: 80px;
+    }
+    h1 {
+      color: #0066cc;
+      margin-bottom: 0.3em;
+    }
+    .intro {
+      text-align: center;
+      padding: 28px 10px 10px 10px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .about {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px #0002;
+      margin: 32px auto 0 auto;
+      max-width: 700px;
+      padding: 26px 30px;
+      font-size: 1.07em;
+      line-height: 1.7;
+    }
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .cat {
+      background: #FFF;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px #0001;
+      min-width: 200px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cat:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 24px #0002;
+    }
+    .cat h2 {
+      color: #00b386;
+    }
+    .products-title {
+      text-align: center;
+      margin: 60px 0 20px 0;
+      color: #232b2b;
+      letter-spacing: 1px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .product {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px #0002;
+      padding: 18px;
+      width: 220px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+      margin-bottom: 16px;
+    }
+    .product:hover {
+      box-shadow: 0 10px 30px #0066cc20;
+      transform: translateY(-5px) scale(1.03);
+    }
+    .product img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #f3f3f3;
+    }
+    .product-name {
+      font-weight: 600;
+      margin: 14px 0 4px 0;
+    }
+    .price {
+      color: #00b386;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      padding: 30px 0 16px 0;
+      background: none;
+    }
+    .socials {
+      margin: 16px 0 0 0;
+    }
+    .social-link {
+      display: inline-block;
+      margin: 0 8px;
+      color: #232b2b;
+      font-size: 1.8em;
+      transition: color 0.2s;
+      vertical-align: middle;
+    }
+    .social-link:hover { color: #00b386; }
+    @media (max-width: 700px) {
+      .categories, .products {
+        flex-direction: column;
+        align-items: center;
+      }
+      .cat, .product {
+        width: 90%;
+        min-width: 0;
+      }
+      .about { padding: 18px 10px; }
+    }
   </style>
+  <!-- Simple icons for social links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <header>
     <img src="logo.svg" alt="Logo MODE&TECHS">
   </header>
   <div class="intro">
-    <h1>Bienvenue sur MODE&TECHS !</h1>
-    <p>Votre boutique en ligne de vêtements tendance et d’accessoires de téléphone à petits prix et à forte demande.</p>
+    <h1>Bienvenue sur MODE&TECHS&nbsp;!</h1>
+    <div class="about">
+      <strong>MODE&TECHS</strong> est une boutique hybride qui combine mode et accessoires high-tech à petits prix. Nos collections sont choisies pour répondre aux tendances actuelles et à la forte demande des clients modernes. Découvrez une expérience shopping unique, où style et technologie se rencontrent pour vous simplifier la vie !
+    </div>
   </div>
   <div class="categories">
     <div class="cat">
@@ -34,8 +158,42 @@
       <p>Coques, écouteurs, chargeurs, supports…</p>
     </div>
   </div>
+  <h2 class="products-title">Quelques produits phares</h2>
+  <div class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="T-shirt tendance">
+      <div class="product-name">T-shirt oversize</div>
+      <div class="price">9,99 €</div>
+      <div class="desc">100% coton, plusieurs coloris.</div>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Coque téléphone">
+      <div class="product-name">Coque antichoc iPhone</div>
+      <div class="price">7,50 €</div>
+      <div class="desc">Protection & style, plusieurs modèles.</div>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Écouteurs sans fil">
+      <div class="product-name">Écouteurs sans fil</div>
+      <div class="price">19,99 €</div>
+      <div class="desc">Bluetooth, autonomie 8h.</div>
+    </div>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="Sweat capuche">
+      <div class="product-name">Sweat à capuche</div>
+      <div class="price">16,99 €</div>
+      <div class="desc">Confort et style urbain.</div>
+    </div>
+  </div>
   <footer>
-    &copy; 2025 MODE&TECHS. Boutique hybride sur GitHub & Shopify.
+    <div class="socials">
+      <a class="social-link" href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a class="social-link" href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a class="social-link" href="https://www.tiktok.com/" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    <div style="margin-top:8px;">
+      &copy; 2025 MODE&TECHS. Boutique hybride sur GitHub & Shopify.
+    </div>
   </footer>
 </body>
 </html>
